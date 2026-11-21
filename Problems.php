@@ -33,6 +33,16 @@ class Solution {
      * @return Float
      */
     function findMedianSortedArrays($nums1, $nums2) {
-        
+         $merged = array_merge($nums1, $nums2);
+        sort($merged);
+
+        $length = count($merged);
+        $middle = intdiv($length, 2);
+
+        if ($length % 2 == 1) {
+            return $merged[$middle];
+        }
+
+        return ($merged[$middle - 1] + $merged[$middle]) / 2;
     }
 }
