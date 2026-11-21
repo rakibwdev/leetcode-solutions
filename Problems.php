@@ -21,3 +21,18 @@ class Solution {
         }
     }
 }
+
+
+// 4. Median of Two Sorted Arrays
+
+class Solution {
+
+    /**
+     * @param Integer[] $nums1
+     * @param Integer[] $nums2
+     * @return Float
+     */
+    function findMedianSortedArrays($nums1, $nums2) {
+        
+    }
+}
