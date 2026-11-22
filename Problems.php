@@ -22,6 +22,39 @@ class Solution {
     }
 }
 
+// 3. Longest Substring Without Repeating Characters
+
+class Solution {
+
+    /**
+     * @param String $s
+     * @return Integer
+     */
+    function lengthOfLongestSubstring($s) {
+         $left = 0;
+        $maxLength = 0;
+        $lastSeen = [];
+
+        $length = strlen($s);
+
+        for ($right = 0; $right < $length; $right++) {
+            $char = $s[$right];
+
+            if (isset($lastSeen[$char]) && $lastSeen[$char] >= $left) {
+                $left = $lastSeen[$char] + 1;
+            }
+
+            $lastSeen[$char] = $right;
+
+            $currentLength = $right - $left + 1;
+
+            $maxLength = max($maxLength, $currentLength);
+        }
+
+        return $maxLength;
+    }
+}
+
 
 // 4. Median of Two Sorted Arrays
 
