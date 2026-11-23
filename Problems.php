@@ -79,3 +79,22 @@ class Solution {
         return ($merged[$middle - 1] + $merged[$middle]) / 2;
     }
 }
+
+
+// 9. Palindrome Number
+
+class Solution {
+
+    /**
+     * @param Integer $x
+     * @return Boolean
+     */
+    function isPalindrome($x) {
+        if($x<0){
+            return false;
+        }
+        $original = (string)$x;
+        $reversed = strrev($original);
+        return $original === $reversed;
+    }
+}
