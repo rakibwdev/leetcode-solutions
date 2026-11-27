@@ -17,3 +17,11 @@ from Employee as e
 join Employee as m 
 on e.managerId = m.id
 where e.salary>m.salary;
+
+
+-- Q3. Not Boring Movies
+
+select *
+from cinema
+where id%2=1 and description !='boring'
+order by rating desc;
